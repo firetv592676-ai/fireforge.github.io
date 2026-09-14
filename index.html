@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FireForge</title>
+  <meta name="description" content="Fire Tablet applications and security research archive.">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="./">FireForge</a>
+    <nav>
+      <button class="tab active" data-tab="apps">APKs</button>
+      <button class="tab" data-tab="exploits">Exploits</button>
+    </nav>
+  </header>
+
+  <main class="shell">
+    <section class="hero">
+      <div>
+        <span class="eyebrow">FIRE TABLET ARCHIVE</span>
+        <h1>Apps, tools &amp; security research.</h1>
+        <p>Files are hosted on Google Drive. The catalog is synchronized automatically from the FireForge Drive folders.</p>
+      </div>
+      <div class="status"><span class="dot"></span><span id="syncStatus">Loading catalog…</span></div>
+    </section>
+
+    <section class="toolbar">
+      <input id="search" type="search" placeholder="Search files…" autocomplete="off">
+      <span id="count" class="muted"></span>
+    </section>
+
+    <section id="grid" class="grid"></section>
+    <section id="empty" class="empty" hidden>No matching files.</section>
+  </main>
+
+  <footer>FireForge · GitHub Pages + Google Drive</footer>
+  <script src="./app.js"></script>
+</body>
+</html>
