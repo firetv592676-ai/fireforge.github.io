@@ -36,6 +36,8 @@ function syncFireForge() {
   const branch = props.getProperty('GITHUB_BRANCH') || 'main';
   if (!token || !owner || !repo) throw new Error('Set GITHUB_TOKEN, GITHUB_OWNER and GITHUB_REPO in Script Properties.');
 
+  validateGitHub_(token, owner, repo, branch);
+
   const existing = loadCatalog_(token, owner, repo, branch);
   const byDriveId = {};
   existing.items.forEach(x => { if (x.driveId) byDriveId[x.driveId] = x; });
@@ -67,7 +69,7 @@ function scanFolder_(folder, type, byDriveId, token, owner, repo, branch) {
 
     if (isApk) {
       try {
-        iconBlob = extractApkIcon_(file.getBlob());
+        iconBlob = extractApkIcon_(file.getBlob(), file.getName());
         if (iconBlob) {
           const ext = getExtensionFromMime_(iconBlob.getContentType());
           const iconName = id + '.' + ext;
@@ -102,8 +104,15 @@ function scanFolder_(folder, type, byDriveId, token, owner, repo, branch) {
   }
 }
 
-function extractApkIcon_(blob) {
-  const entries = Utilities.unzip(blob);
+function extractApkIcon_(blob, fileName) {
+  // Google Drive may label APK blobs as application/vnd.android.package-archive.
+  // Utilities.unzip() expects a ZIP blob, so normalize the MIME type first.
+  const apkZipBlob = Utilities.newBlob(
+    blob.getBytes(),
+    'application/zip',
+    fileName || 'app.apk'
+  );
+  const entries = Utilities.unzip(apkZipBlob);
   const candidates = [];
   entries.forEach(entry => {
     const name = entry.getName();
@@ -135,6 +144,50 @@ function loadCatalog_(token, owner, repo, branch) {
   } catch (e) {
     return {items: []};
   }
+}
+
+
+function validateGitHub_(token, owner, repo, branch) {
+  const repoUrl = 'https://api.github.com/repos/' + encodeURIComponent(owner) + '/' + encodeURIComponent(repo);
+  const repoRes = UrlFetchApp.fetch(repoUrl, githubOptions_(token, 'get', null, true));
+  const code = repoRes.getResponseCode();
+  if (code !== 200) {
+    let detail = repoRes.getContentText();
+    try {
+      const json = JSON.parse(detail);
+      detail = json.message || detail;
+    } catch (_) {}
+    throw new Error(
+      'GitHub repository check failed (' + code + '): ' + detail +
+      '. Check GITHUB_OWNER, GITHUB_REPO, and that the token can access this repository.'
+    );
+  }
+
+  const branchUrl = repoUrl + '/branches/' + encodeURIComponent(branch);
+  const branchRes = UrlFetchApp.fetch(branchUrl, githubOptions_(token, 'get', null, true));
+  const branchCode = branchRes.getResponseCode();
+  if (branchCode !== 200) {
+    let detail = branchRes.getContentText();
+    try {
+      const json = JSON.parse(detail);
+      detail = json.message || detail;
+    } catch (_) {}
+    throw new Error(
+      'GitHub branch check failed (' + branchCode + '): ' + detail +
+      '. Check GITHUB_BRANCH; it is usually "main".'
+    );
+  }
+}
+
+function testGitHub() {
+  const props = PropertiesService.getScriptProperties();
+  const token = props.getProperty('GITHUB_TOKEN');
+  const owner = props.getProperty('GITHUB_OWNER');
+  const repo = props.getProperty('GITHUB_REPO');
+  const branch = props.getProperty('GITHUB_BRANCH') || 'main';
+  if (!token || !owner || !repo) throw new Error('Set GITHUB_TOKEN, GITHUB_OWNER and GITHUB_REPO first.');
+  validateGitHub_(token, owner, repo, branch);
+  console.log('GitHub connection OK: ' + owner + '/' + repo + ' @ ' + branch);
 }
 
 function getRepoFile_(path, token, owner, repo, branch) {
