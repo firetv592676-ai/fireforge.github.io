@@ -172,54 +172,31 @@ img {
    ========================================================= */
 
 .brand {
-
   display: inline-flex;
   align-items: center;
-
-  gap: 11px;
-
+  gap: 14px;
   text-decoration: none;
-
-  white-space: nowrap;
+  color: var(--text);
+  font-weight: 800;
+  font-size: 1.35rem;
+  letter-spacing: -0.03em;
 }
-
 
 .brand-mark {
-
-  width: 42px;
-  height: 42px;
-
+  width: 52px;
+  height: 52px;
   display: grid;
   place-items: center;
-
-  border-radius: 14px;
-
-  background:
-    linear-gradient(
-      145deg,
-      #d6c7ff,
-      #a991ec
-    );
-
-  color: #2c1758;
-
-  font-size: 17px;
-  font-weight: 900;
-
-  box-shadow:
-    0 6px 20px rgba(139, 109, 220, 0.22);
+  border-radius: 16px;
+  font-size: 1.5rem;
+  flex-shrink: 0;
 }
-
 
 .brand-name {
-
-  font-size: 1.12rem;
-
-  font-weight: 800;
-
-  letter-spacing: -0.025em;
+  font-size: 1.45rem;
+  font-weight: 850;
+  letter-spacing: -0.04em;
 }
-
 
 /* =========================================================
    NAVIGATION
