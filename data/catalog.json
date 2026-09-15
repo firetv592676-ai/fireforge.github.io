@@ -8,34 +8,21 @@
     "category": "apps",
     "version": "",
     "size": "8.4 MB",
-    "iconPath": "./assets/icons/lawnchair-for-fireos-7.png",
+    "iconPath": "",
     "downloadUrl": "https://drive.google.com/file/d/10aa7AQdD5AejIwJO16-ypy3A7U3X39NB/view",
     "updatedAt": "2026-09-15T20:00:05.614Z"
   },
   {
-    "id": "1f5V6jV8J4mFoPXKrBJsJrEqqEwenUYe1",
-    "driveId": "1f5V6jV8J4mFoPXKrBJsJrEqqEwenUYe1",
+    "id": "1AWApRZlzCAxTOTXy6Kj9WEvQIwSR2oy9",
+    "driveId": "1AWApRZlzCAxTOTXy6Kj9WEvQIwSR2oy9",
     "name": "fireos 7 system user adb exploit",
-    "description": "works on fire os 7.3.3.2 other fire os versions are untested",
+    "description": "Gives system elevated shell in adb\r\nTested on fire os 7.3.3.2\r\nNot tested on fire os 8",
     "type": "Security Research",
     "category": "exploit",
     "version": "",
     "size": "444 B",
     "iconPath": "",
-    "downloadUrl": "https://drive.google.com/file/d/1f5V6jV8J4mFoPXKrBJsJrEqqEwenUYe1/view",
-    "updatedAt": "2026-09-15T20:18:34.031Z"
-  },
-  {
-    "id": "1BXQSJUqKIK-rYnjcrTcJXxdPLjr6y8GZ",
-    "driveId": "1BXQSJUqKIK-rYnjcrTcJXxdPLjr6y8GZ",
-    "name": "fire os priv app bypass",
-    "description": "No description provided.",
-    "type": "Security Research",
-    "category": "exploit",
-    "version": "",
-    "size": "444 B",
-    "iconPath": "",
-    "downloadUrl": "https://drive.google.com/file/d/1BXQSJUqKIK-rYnjcrTcJXxdPLjr6y8GZ/view",
-    "updatedAt": "2026-09-09T21:00:29.000Z"
+    "downloadUrl": "https://drive.google.com/file/d/1AWApRZlzCAxTOTXy6Kj9WEvQIwSR2oy9/view",
+    "updatedAt": "2026-09-15T20:33:40.788Z"
   }
 ]
