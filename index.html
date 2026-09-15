@@ -1,49 +1,195 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
   <title>FireForge</title>
-  <meta name="description" content="Fire Tablet applications and security research archive.">
+
   <link rel="stylesheet" href="./styles.css">
 </head>
+
+
 <body>
+
+  <!-- =====================================================
+       HEADER
+       ===================================================== -->
+
   <header class="topbar">
-    <a class="brand" href="./">FireForge</a>
+
+    <a class="brand" href="./">
+      FireForge
+    </a>
+
     <nav>
+
+      <button
+        class="tab active"
+        data-tab="apps"
+        type="button"
+      >
+        APKs
+      </button>
+
+      <button
+        class="tab"
+        data-tab="exploits"
+        type="button"
+      >
+        Exploits
+      </button>
+
+      <!-- Direct Google Apps Script Upload Center -->
       <a
-  href="https://script.google.com/macros/s/AKfycbwU4Grdli4uibnRMC4vvr95WBCJLgu4tr_rasYN9fc30g3jb5punJTbPePT8e5maIP8/exec"
-  target="_blank"
-  rel="noopener"
-  class="upload-btn"
->
-  Upload
-        </a>
-      <button class="tab active" data-tab="apps">APKs</button>
-      <button class="tab" data-tab="exploits">Exploits</button>
+        class="upload-link"
+        href="https://script.google.com/macros/s/AKfycbwU4Grdli4uibnRMC4vvr95WBCJLgu4tr_rasYN9fc30g3jb5punJTbPePT8e5maIP8/exec"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Upload
+      </a>
+
     </nav>
+
   </header>
 
-  <main class="shell">
+
+  <!-- =====================================================
+       MAIN
+       ===================================================== -->
+
+  <main class="container">
+
+    <!-- Hero -->
+
     <section class="hero">
-      <div>
-        <span class="eyebrow">FIRE TABLET ARCHIVE</span>
-        <h1>Apps, tools &amp; security research.</h1>
-        <p>Files are hosted on Google Drive. The catalog is synchronized automatically from the FireForge Drive folders.</p>
+
+      <div class="hero-content">
+
+        <div class="eyebrow">
+          FIRE TABLET SOFTWARE
+        </div>
+
+        <h1>
+          FireForge
+        </h1>
+
+        <p>
+          A collection of applications, utilities,
+          tools and security research for Amazon
+          Fire Tablets.
+        </p>
+
       </div>
-      <div class="status"><span class="dot"></span><span id="syncStatus">Loading catalog…</span></div>
+
     </section>
 
-    <section class="toolbar">
-      <input id="search" type="search" placeholder="Search files…" autocomplete="off">
-      <span id="count" class="muted"></span>
+
+    <!-- ===================================================
+         SEARCH / CONTROLS
+         =================================================== -->
+
+    <section class="controls">
+
+      <div class="search-box">
+
+        <input
+          id="search"
+          type="search"
+          placeholder="Search FireForge..."
+          autocomplete="off"
+          aria-label="Search FireForge"
+        >
+
+      </div>
+
+      <div
+        id="count"
+        class="count"
+      >
+        0 items
+      </div>
+
     </section>
 
-    <section id="grid" class="grid"></section>
-    <section id="empty" class="empty" hidden>No matching files.</section>
+
+    <!-- ===================================================
+         CATALOG
+         =================================================== -->
+
+    <section>
+
+      <div
+        id="grid"
+        class="grid"
+      ></div>
+
+      <div
+        id="empty"
+        class="empty"
+        hidden
+      >
+
+        <div class="empty-icon">
+          🔍
+        </div>
+
+        <h2>
+          Nothing found
+        </h2>
+
+        <p>
+          No items match your search.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- ===================================================
+         STATUS
+         =================================================== -->
+
+    <div
+      id="syncStatus"
+      class="sync-status"
+    >
+      Loading catalog...
+    </div>
+
   </main>
 
-  <footer>FireForge · GitHub Pages + Google Drive</footer>
+
+  <!-- =====================================================
+       FOOTER
+       ===================================================== -->
+
+  <footer class="footer">
+
+    <div>
+      FireForge
+    </div>
+
+    <div>
+      Fire Tablet software &amp; security research
+    </div>
+
+  </footer>
+
+
+  <!-- =====================================================
+       JAVASCRIPT
+       ===================================================== -->
+
   <script src="./app.js"></script>
+
 </body>
+
 </html>
