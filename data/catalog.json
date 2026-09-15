@@ -8,9 +8,22 @@
     "category": "apps",
     "version": "",
     "size": "8.4 MB",
-    "iconPath": "./assets/icons/lawnchair-for-fireos-7.png",
+    "iconPath": "",
     "downloadUrl": "https://drive.google.com/file/d/10aa7AQdD5AejIwJO16-ypy3A7U3X39NB/view",
     "updatedAt": "2026-09-15T20:00:05.614Z"
+  },
+  {
+    "id": "1f5V6jV8J4mFoPXKrBJsJrEqqEwenUYe1",
+    "driveId": "1f5V6jV8J4mFoPXKrBJsJrEqqEwenUYe1",
+    "name": "fireos 7 system user adb exploit",
+    "description": "works on fire os 7.3.3.2 other fire os versions are untested",
+    "type": "Security Research",
+    "category": "exploit",
+    "version": "",
+    "size": "444 B",
+    "iconPath": "",
+    "downloadUrl": "https://drive.google.com/file/d/1f5V6jV8J4mFoPXKrBJsJrEqqEwenUYe1/view",
+    "updatedAt": "2026-09-15T20:18:34.031Z"
   },
   {
     "id": "1BXQSJUqKIK-rYnjcrTcJXxdPLjr6y8GZ",
