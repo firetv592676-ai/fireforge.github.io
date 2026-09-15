@@ -1,14 +1,14 @@
 {
-  "generatedAt": "2026-09-15T12:54:12.112Z",
+  "generatedAt": "2026-09-15T13:06:37.240Z",
   "items": [
     {
       "id": "1BXQSJUqKIK-rYnjcrTcJXxdPLjr6y8GZ",
       "driveId": "1BXQSJUqKIK-rYnjcrTcJXxdPLjr6y8GZ",
       "type": "exploits",
       "name": "fire os priv app bypass",
+      "description": "Security research file uploaded to FireForge.",
       "version": "",
-      "description": "Automatically imported from the Exploit folder.",
-      "category": "Security research",
+      "category": "Security Research",
       "size": "444 B",
       "iconPath": "",
       "downloadUrl": "https://drive.google.com/uc?export=download&id=1BXQSJUqKIK-rYnjcrTcJXxdPLjr6y8GZ",
@@ -19,8 +19,8 @@
       "driveId": "1oNNcP-xsvO2L3RFt3L4lzVjFjKVi37dg",
       "type": "apps",
       "name": "lawnchair",
+      "description": "Application uploaded to FireForge.",
       "version": "",
-      "description": "Automatically imported from the Apps folder.",
       "category": "APK",
       "size": "8.4 MB",
       "iconPath": "assets/icons/1oNNcP-xsvO2L3RFt3L4lzVjFjKVi37dg.png",
