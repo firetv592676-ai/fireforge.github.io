@@ -1,10 +1,173 @@
-<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>FireForge</title><link rel="stylesheet" href="./styles.css"></head><body><header><a class="brand" href="./"><span class="mark">🔥</span><span><b>FireForge</b><small>Fire Tablet tools</small></span></a><nav><button class="tab active" data-tab="apps">Apps</button><button class="tab" data-tab="exploits">Exploits</button></nav><a
-  class="upload-button"
-  href="https://script.google.com/macros/s/AKfycbz2Tq5_YKB-OzCiYDluf_5VXmjHfUZsVbC53uJc27rw5RWImlo3YoCEscU9j6TZE-yz/exec"
-  target="_blank"
-  rel="noopener noreferrer"
->
-  <span>＋</span>
-  Upload
-</a>
-</header><main><section class="hero"><small>FIRE TABLET COMMUNITY HUB</small><h1>Build your<br><em>Fire experience.</em></h1><p>Discover apps, utilities, tweaks, and security research for Fire Tablet users.</p><label class="search">⌕ <input id="search" placeholder="Search apps, exploits, and utilities…"><kbd>/</kbd></label></section><section class="catalog"><div class="heading"><div><small>LIBRARY</small><h2 id="title">Apps & utilities</h2></div><span id="count">0 items</span></div><div id="grid"></div><div id="empty" hidden>No matching items.</div></section></main><footer>© <span id="year"></span> FireForge</footer><script src="./app.js"></script></body></html>
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta
+    name="description"
+    content="FireForge — Fire Tablet apps, utilities, exploits and security research."
+  >
+
+  <title>FireForge</title>
+
+  <!-- Keep the existing CSS from the FireForge folder -->
+  <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+
+  <header>
+
+    <!-- FireForge logo -->
+    <a
+      class="brand"
+      href="./"
+      aria-label="FireForge home"
+    >
+      <span class="mark">🔥</span>
+
+      <span>
+        <b>FireForge</b>
+        <small>Fire Tablet tools</small>
+      </span>
+    </a>
+
+
+    <!-- Main navigation -->
+    <nav aria-label="Catalog sections">
+
+      <button
+        class="tab active"
+        data-tab="apps"
+        type="button"
+      >
+        Apps
+      </button>
+
+      <button
+        class="tab"
+        data-tab="exploits"
+        type="button"
+      >
+        Exploits
+      </button>
+
+    </nav>
+
+
+    <!-- Upload Center -->
+    <a
+      class="upload"
+      href="https://script.google.com/macros/s/AKfycbz2Tq5_YKB-OzCiYDluf_5VXmjHfUZsVbC53uJc27rw5RWImlo3YoCEscU9j6TZE-yz/exec"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Open FireForge Upload Center"
+    >
+      ＋ Upload
+    </a>
+
+  </header>
+
+
+  <main>
+
+    <!-- Hero -->
+    <section class="hero">
+
+      <small>
+        FIRE TABLET COMMUNITY HUB
+      </small>
+
+
+      <h1>
+        Build your<br>
+        <em>Fire experience.</em>
+      </h1>
+
+
+      <p>
+        Discover apps, utilities, tweaks,
+        and security research for Fire Tablet users.
+      </p>
+
+
+      <!-- Search -->
+      <label
+        class="search"
+        for="search"
+      >
+
+        <span aria-hidden="true">
+          ⌕
+        </span>
+
+        <input
+          id="search"
+          type="search"
+          placeholder="Search apps, exploits, and utilities…"
+          autocomplete="off"
+          aria-label="Search FireForge"
+        >
+
+        <kbd>/</kbd>
+
+      </label>
+
+    </section>
+
+
+    <!-- Catalog -->
+    <section class="catalog">
+
+      <div class="heading">
+
+        <div>
+
+          <small>
+            LIBRARY
+          </small>
+
+          <h2 id="title">
+            Apps &amp; utilities
+          </h2>
+
+        </div>
+
+
+        <span id="count">
+          0 items
+        </span>
+
+      </div>
+
+
+      <!-- Items are inserted by app.js -->
+      <div id="grid"></div>
+
+
+      <!-- Empty search result -->
+      <div
+        id="empty"
+        hidden
+      >
+        No matching items.
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <footer>
+    © <span id="year"></span> FireForge
+  </footer>
+
+
+  <!-- Existing FireForge JavaScript -->
+  <script src="./app.js"></script>
+
+</body>
+
+</html>
