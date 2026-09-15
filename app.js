@@ -1,3 +1,4 @@
+const UPLOAD_WEB_APP_URL ='https://script.google.com/macros/s/AKfycbwU4Grdli4uibnRMC4vvr95WBCJLgu4tr_rasYN9fc30g3jb5punJTbPePT8e5maIP8/exec'
 const state={tab:'apps',items:[],query:''};
 const grid=document.querySelector('#grid');
 const empty=document.querySelector('#empty');
